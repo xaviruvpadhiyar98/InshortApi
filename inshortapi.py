@@ -1,6 +1,5 @@
 import requests
 from bs4 import BeautifulSoup
-import json
 
 def ShowCategories():
 	categories = ["All", "India", "Business", "Sports", "World", "Politics",
@@ -46,7 +45,6 @@ def InshortAPI(category=""):
 
 def main():
 	newsDictionary = inshortAPI("Miscellaneous")
-
 	for x,y in newsDictionary[0].items():
 		y = y.replace("\n","")
 		print(f"{x} - {y}",end="\n\n")
